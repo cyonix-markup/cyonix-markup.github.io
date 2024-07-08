@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyonix Example</title>
+  
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/cyonix@1.0.3/styles.min.css" rel="stylesheet">
+  
+  <!-- Include Cyonix JavaScript (assuming it depends on Tailwind for styling) -->
+  <script src="https://cdn.jsdelivr.net/npm/cyonix@1.0.3/cyonix.min.js"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-4">Welcome to Cyonix</h1>
+    
+    <textarea id="cy-input" rows="10" cols="80" class="w-full bg-white border border-gray-300 rounded-lg p-4 mb-4">
+# Welcome to Cyonix
+
+* [ ] Task 1
+* [x] Task 2
+[This is a key]
+
+This is ~~not~~ strikethrough.
+
+``Incline code is the best code!``
+ 
+<<Bold is the best lmao.>>
+
+[[Italic is leannnnning.]]
+
+{Link to Example}(https://example.com)
+
+
+![This image does not exist.]{}
+
+
+>> Blockquote
+
+1. Numbered List Item 1
+2. Numbered List Item 2
+
+- Dotted List Item 1
+- Dotted List Item 2    
+    </textarea>
+    
+    <button onclick="renderCY()" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Render Output</button>
+    
+    <div id="html-output" class="mt-4 h-64 overflow-y-auto border border-gray-300 p-4">
+      <!-- Rendered HTML output will appear here -->
+    </div>
+  </div>
+
+  <!-- Tailwind CSS for responsive design -->
+  <style>
+    @media (min-width: 640px) {
+      .container {
+        max-width: 640px;
+      }
+    }
+  </style>
+</body>
+</html>
