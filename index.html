@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyonix - Markdown-Inspired Markup Language</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-purple text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to Cyonix</h1>
+            <p class="lead">A markdown-inspired markup language designed for simplicity and flexibility.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section-animation">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <img src="cyonix-logo.png" alt="Cyonix Logo" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <h2>About Cyonix</h2>
+                        <p class="lead">Cyonix is a lightweight markup language inspired by Markdown, designed to be easy to read and write while offering powerful features for content formatting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section-animation">
+            <div class="container">
+                <h2 class="text-center">Key Features</h2>
+                <ul class="list-unstyled text-center">
+                    <li>Simple syntax</li>
+                    <li>Extensible with plugins</li>
+                    <li>Supports HTML embedding</li>
+                    <li>Designed for both web and documentation purposes</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="examples" class="section-animation">
+            <div class="container">
+                <h2 class="text-center">Examples and Tutorials</h2>
+                <p class="lead text-center">Explore some examples and tutorials to get started with Cyonix:</p>
+                <ul class="list-unstyled text-center">
+                    <li><a href="examples/tutorial1.html" class="text-purple">Getting Started with Cyonix</a></li>
+                    <li><a href="examples/tutorial2.html" class="text-purple">Advanced Formatting Techniques</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="download" class="section-animation">
+            <div class="container text-center">
+                <h2>Download Cyonix</h2>
+                <p class="lead">Get started with Cyonix today. Download the latest version:</p>
+                <a href="https://your-download-link" class="btn btn-primary btn-lg">Download Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $('.section-animation').each(function() {
+                    var position = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > position - windowHeight + 200) {
+                        $(this).addClass('animate');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
